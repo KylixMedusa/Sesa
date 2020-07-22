@@ -1,0 +1,217 @@
+html,body{
+    margin:0;
+    background-color: #ffffff;
+}
+*{
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+.top{
+    height:20px;
+    width:100%;
+    background-image:linear-gradient(45deg,#6D13D6,#18E1F9);
+}
+.section{
+    padding:0 10vw;
+    padding-top:3vw;
+    width:100%;
+    text-align: center;
+}
+.section.one h3{
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-image:linear-gradient(to right,#6D13D6,#18E1F9);
+    background-size: max-content 100%;
+    background-position: center center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+h2{
+    margin: 0;
+    padding:0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.section.two p{
+    margin-top: 2rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.section.three{
+    padding:5vw;
+    margin-top: 5vw;
+    background-image: linear-gradient(45deg,#6D13D6,#18E1F9);
+    background-size: 150%;
+}
+.section.three > h2{
+    color:white;
+}
+.section.three .container{
+    margin-top: 5vw;
+    display: grid;
+    width:100%;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 1.5rem;
+}
+.section.three .container .card{
+    width:100%;
+    max-width: 200px;
+    place-self: center;
+}
+.section.three .container .card div{
+    background-color: white;
+    padding:20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+.section.three .container .card div h2{
+    font-size: 1.6rem;
+}
+.section.three .container .card h5{
+    color:white;
+}
+.section.four{
+    padding:0;
+    padding-top:5vw;
+}
+.section.four .container{
+    margin-top: 5vw;
+}
+.section.four .pin{
+    position: relative;
+    height:90px;
+    width: 70px;
+    background-image: url("Asset 1.svg");
+    background-color: cover;
+    background-repeat: no-repeat;
+}
+.section.four .pin div{
+    position: absolute;
+    top:10px;
+    left:10px;
+    height:50px;
+    width:50px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section.four .pin div small{
+    font-size: 11px;
+    font-weight: 700;
+}
+.section.four .text{
+    height:75px;
+    width:150px;
+}
+.section.four .text p{
+    font-size: 11px;
+    margin: 0;
+    padding:0;
+}
+.section.four .wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 5vw ;
+}
+.section.four .wrapper.two{
+    padding:0 calc(5vw - 40px);
+}
+.section.four .wrapper.two .pin{
+    transform: rotate(180deg);
+}
+.section.four .wrapper.two .pin div{
+    transform: rotate(180deg);
+}
+.section.four .top{
+    margin:10px 0;
+}
+.section.five{
+    margin-top: 5vw;
+}
+.section.five .container{
+    margin-top: 3vw;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1.5rem;
+}
+.section.five img{
+    width:100%;
+}
+.section.six img{
+    margin: 5vw 0;
+    width:80%;
+    max-width: 200px;
+}
+@media screen and (max-width: 760px){
+    .section.three .container{
+        grid-template: repeat(2,1fr) / repeat(3,1fr);
+    }
+} 
+@media screen and (max-width: 500px){
+    .section.three .container{
+        grid-template: repeat(3,1fr) / repeat(2,1fr);
+    }
+    .section.three .container .card:last-child{
+        width: 50%;
+        grid-column: span 2;
+    }
+} 
+@media screen and (max-width: 355px){
+    .section.one , .section.two{
+        padding-left:5vw;
+        padding-right: 5vw;
+    }
+    .section.three .container{
+        grid-template: repeat(5,1fr) / 1fr;
+    }
+    .section.three .container .card:last-child{
+        width:100%;
+        grid-column: span 1;
+    }
+    .section.four .wrapper{
+        padding:0;
+        transform: scale(0.8);
+    }
+} 
+@media screen and (max-width: 600px){
+    .section.four .container{
+        justify-content: space-around;
+        display: flex;
+        height:100%;
+    }
+    .section.four .top{
+        width:20px;
+        height:500px;
+        margin: 0;
+    }
+    .section.four .wrapper{
+        flex-direction: column;
+    }
+    .section.four .wrapper{
+        padding:0;
+    }
+    .section.four .text{
+        display: flex;
+        align-items: center;
+    }
+    .section.four .pin{
+        transform: rotate(-90deg);
+    }
+    .section.four .pin div{
+        transform: rotate(90deg);
+    }
+    .section.four .wrapper.two .pin{
+        transform: rotate(90deg);
+    }
+    .section.four .wrapper.two .pin div{
+        transform: rotate(-90deg);
+    }
+    .section.five .container{
+        grid-template-columns: 1fr;
+    }
+} 
